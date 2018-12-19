@@ -7,9 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anijitsahu/react-app-simple-hello-world.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anijitsahu/react-app-simple-hello-world/issues"
+  },
+  "homepage": "https://github.com/anijitsahu/react-app-simple-hello-world#readme",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
