@@ -1,5 +1,5 @@
 # react-app-simple-hello-world
-A simple Hello World Application using [React JS](https://reactjs.org/docs/getting-started.html), a JavaScript library to make awesome UI by Facebook.
+A simple Hello World Application using [React JS](https://reactjs.org/docs/getting-started.html), a JavaScript library to make awesome UI by Facebook. 
 
 This application uses [React JS](https://reactjs.org/docs/getting-started.html) component oriented UI creation paradigm. All components are written in [JSX](https://reactjs.org/docs/jsx-in-depth.html) and ES6 style and are
 combined to get a single build for production purpose using [Webpack 4](https://webpack.js.org/concepts/). 
