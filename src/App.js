@@ -8,13 +8,13 @@ import Description from './components/Description';
 import './css/style.css'
 
 const App = () => {
-  return (
-    <div className="container">
-    	{ /* including the Title as well as Description components */ }
-  		<Title />
-  		<Description />	
-  	</div>
-  );
+	return (
+		<div className="container">
+			{ /* including the Title as well as Description components */}
+			<Title />
+			<Description />
+		</div>
+	);
 };
 
 
