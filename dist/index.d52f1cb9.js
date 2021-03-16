@@ -997,9 +997,9 @@ var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
 
 try {
-  var _react = _interopRequireWildcard(require("react"));
+  var _react = _interopRequireDefault(require("react"));
 
-  var _reactDom = _interopRequireDefault(require("react-dom"));
+  var _reactDom = require("react-dom");
 
   var _App = _interopRequireDefault(require("./App"));
 
@@ -1007,19 +1007,15 @@ try {
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-  _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, {
+  // render 
+  (0, _reactDom.render)( /*#__PURE__*/_react.default.createElement(_App.default, {
     __self: void 0,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7,
-      columnNumber: 17
+      columnNumber: 8
     }
-  }), document.getElementById("app"));
-
+  }), document.getElementById('app'));
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
@@ -30736,7 +30732,7 @@ try {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"./components/Title":"3lLlU","./components/Description":"YBK6t","./css/style.css":"61VVo","react":"5WtM0","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc"}],"3lLlU":[function(require,module,exports) {
+},{"react":"5WtM0","./components/Title":"3lLlU","./components/Description":"YBK6t","./css/style.css":"61VVo","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1t8mc"}],"3lLlU":[function(require,module,exports) {
 "use strict";
 
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -30772,14 +30768,14 @@ try {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 6,
-        columnNumber: 6
+        columnNumber: 7
       }
     }, "Hello ", /*#__PURE__*/_react.default.createElement("strong", {
       __self: void 0,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 6,
-        columnNumber: 38
+        columnNumber: 39
       }
     }, "World")));
   };
