@@ -2,7 +2,7 @@
 A simple Hello World Application using [React JS](https://reactjs.org/docs/getting-started.html), a JavaScript library to make awesome UI by Facebook. 
 
 This application uses [React JS](https://reactjs.org/docs/getting-started.html) component oriented UI creation paradigm. All components are written in [JSX](https://reactjs.org/docs/jsx-in-depth.html) and ES6 style and are
-combined to get a single build for production purpose using [Webpack 4](https://webpack.js.org/concepts/). 
+combined to get a single build for production purpose using [Webpack 5](https://webpack.js.org/concepts/). 
 
 ES6 `module` creation along with `import /export` is used. [Babel](https://babeljs.io/docs/en/babel-preset-react) is used to *transpile* all [JSX](https://reactjs.org/docs/jsx-in-depth.html) code to vanilla JavaScript code. To install all the dependecies `npm` is used.
 
@@ -13,17 +13,25 @@ This is a *responsive web application* for viewing in both Mobile and Desktop.
 
 ## Features
 - This is just a basic Hello World program
-
+- Code is re written using [React JS 17](https://reactjs.org/docs/getting-started.html)
+- [Webpack 5](https://webpack.js.org/concepts/) is used for the building purpose
+- Latest features of JavaScript i.e. ES6, ES7, ES8 is used
 
 ## Installation
 
-1. Clone the repository using `git clone https://github.com/anijitsahu/react-app-simple-hello-world.git` from `Git Bash / Command Prompt`
-2. Navigate inside the directory by `cd react-app-simple-hello-world`
-3. Install all the necessary dependecies by using `npm install` (optional)
-4. Navigate to the directory `dist`
-5. Open `index.html` page in a web browser 
+Clone the repository:
+ ```
+ git clone https://github.com/anijitsahu/react-app-simple-hello-world.git
+ ```
+
+Navigate inside the directory: 
+```
+cd react-app-simple-hello-world/dist
+```
+
+Open `index.html` page in a web browser 
  
-*tested with <img src="screenshots/chrome.png" width="20px" title="Google Chrome">Google Chrome v70 and <img src="screenshots/firefox.png" width="25px" title="Firefox Developer edition">Mozilla Firefox Developer Editon*  
+*tested with <img src="screenshots/chrome.png" width="20px" title="Google Chrome">Google Chrome v89 and <img src="screenshots/firefox.png" width="25px" title="Firefox Developer edition">Mozilla Firefox 86*
 
 ## Screenshots
 
