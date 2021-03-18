@@ -25,7 +25,8 @@ html {
   grid-template-columns: 1fr;
 
   /* margin to make it look good */
-  margin: 5%;
+  margin: 5% auto;
+  width: 50vw;
 }
 
 .title {
