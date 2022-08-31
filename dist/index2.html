@@ -174,24 +174,37 @@
     width: 110px;
     height: 36px;
 }
-</style></head> <body> <div class="iframe-container"> <iframe id="myIframe" src="" onLoad="iframeDidLoad();" allow="clipboard-read; clipboard-write"></iframe></div>
+</style></head> <body> 
+	
+	<script>
+		function iframeDidLoad(e){
+			console.log("iframe did load call hua");
+			e.target.contentWindow.postMessage("getURL","*");
+		}	
+	</script>
+	
+	
+	<div class="iframe-container">
+	
+	
+	<iframe id="myIframe" src="" onLoad="iframeDidLoad();" allow="clipboard-read; clipboard-write"></iframe></div>
 	<script>
 		var loc=window.location.toString(),params=loc.split('?')[1],iframe=document.getElementById('myIframe');
 		iframe.src="https://app.adyogi.com"+ window.location.pathname + '?' + params;
 		function listenMessage(msg) {
 		    if(msg.url){
-			console.log("on load pe aaya");
+			console.log("on msg update pe aa gya");
 			history.pushState({},'',msg.url);
 		    }
 		
 		}
 
 		if (window.addEventListener) {
+		    console.log("add event listener ho gya");
 		    window.addEventListener("message", listenMessage, false);
 		} else {
+		    console.log("attach event ho gya");
 		    window.attachEvent("onmessage", listenMessage);
 		}
-		function iframeDidLoad(){
-			iframe.contentWindow.postMessage("getURL","*");
-		}	
+			
 	</script></body></html>
