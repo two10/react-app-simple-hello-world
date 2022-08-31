@@ -179,7 +179,8 @@
 	<script>
 		function iframeDidLoad(e){
 			console.log("iframe did load call hua");
-			e.target.contentWindow.postMessage("getURL","*");
+			var frame = iframe=document.getElementById('myIframe');
+			frame.contentWindow.postMessage("getURL","*");
 		}	
 	</script>
 	
