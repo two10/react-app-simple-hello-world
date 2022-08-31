@@ -174,14 +174,24 @@
     width: 110px;
     height: 36px;
 }
-</style></head> <body> <div class="iframe-container"> <iframe id="myIframe" src="" onLoad="iframeDidLoad();"></iframe></div>
+</style></head> <body> <div class="iframe-container"> <iframe id="myIframe" src="" onLoad="iframeDidLoad();" allow="clipboard-read; clipboard-write"></iframe></div>
 	<script>
 		var loc=window.location.toString(),params=loc.split('?')[1],iframe=document.getElementById('myIframe');
 		iframe.src="https://app.adyogi.com"+ window.location.pathname + '?' + params;
-		function iframeDidLoad(){
+		function listenMessage(msg) {
+		    if(msg.url){
 			console.log("on load pe aaya");
-			var iframeParam = iframe.src.split('?')[1];
-			var updatedSrc = (new URL(iframe.src)).pathname+'?'+iframeParam;
-			history.pushState({},'',updatedSrc);
+			history.pushState({},'',msg.url);
+		    }
+		
+		}
+
+		if (window.addEventListener) {
+		    window.addEventListener("message", listenMessage, false);
+		} else {
+		    window.attachEvent("onmessage", listenMessage);
+		}
+		function iframeDidLoad(){
+			iframe.contentWindow.postMessage("getURL","*");
 		}	
 	</script></body></html>
