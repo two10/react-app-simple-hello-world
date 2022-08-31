@@ -179,6 +179,7 @@
 		var loc=window.location.toString(),params=loc.split('?')[1],iframe=document.getElementById('myIframe');
 		iframe.src="https://app.adyogi.com"+ window.location.pathname + '?' + params;
 		function iframeDidLoad(){
+			console.log("on load pe aaya");
 			var iframeParam = iframe.src.split('?')[1];
 			var updatedSrc = (new URL(iframe.src)).pathname+'?'+iframeParam;
 			history.pushState({},'',updatedSrc);
