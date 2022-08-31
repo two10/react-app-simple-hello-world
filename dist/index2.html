@@ -174,4 +174,13 @@
     width: 110px;
     height: 36px;
 }
-</style></head> <body> <div class="iframe-container"> <iframe id="myIframe" src=""></iframe></div><script>var loc=window.location.toString(),params=loc.split('?')[1],iframe=document.getElementById('myIframe');iframe.src="https://app.adyogi.com"+ window.location.pathname + '?' + params;</script></body></html>
+</style></head> <body> <div class="iframe-container"> <iframe id="myIframe" src="" onLoad="iframeDidLoad();"></iframe></div>
+	<script>
+		var loc=window.location.toString(),params=loc.split('?')[1],iframe=document.getElementById('myIframe');
+		iframe.src="https://app.adyogi.com"+ window.location.pathname + '?' + params;
+		function iframeDidLoad(){
+			var iframeParam = iframe.src.split('?')[1];
+			var updatedSrc = (new URL(iframe.src)).pathname+'?'+iframeParam;
+			history.pushState({},'',updatedSrc);
+		}	
+	</script></body></html>
