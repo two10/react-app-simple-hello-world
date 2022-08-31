@@ -193,9 +193,9 @@
 		var loc=window.location.toString(),params=loc.split('?')[1],iframe=document.getElementById('myIframe');
 		iframe.src="https://app.adyogi.com"+ window.location.pathname + '?' + params;
 		function listenMessage(msg) {
-		    if(msg.url){
+		    if(msg.data.url){
 			console.log("on msg update pe aa gya");
-			history.pushState({},'',msg.url);
+			history.pushState({},'',msg.data.url);
 		    }
 		
 		}
